@@ -1,0 +1,19 @@
+@import url("reset.css");
+
+body {
+    font-family: var(--font-text);
+    font-size: 20px;
+}
+
+
+:root {
+
+    --font-text: 'Star Wars', sans-serif;
+
+
+
+
+
+
+
+}
