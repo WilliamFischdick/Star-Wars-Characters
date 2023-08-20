@@ -1,17 +1,23 @@
 @import url("reset.css");
+@import url("header.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
     background-size: cover;
     font-family: var(--font-text);
-   
 }
 
 
 :root {
 
+    /*Fonts*/
     --font-text: 'Star Wars', sans-serif;
 
+
+    /*Colors*/
+
+    --white: #ffffff;
+    --gold: #ffd700;
 
 
 
