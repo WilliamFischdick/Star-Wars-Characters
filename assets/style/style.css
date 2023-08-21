@@ -3,6 +3,7 @@
 @import url("section-main.css");
 @import url("buttons.css");
 @import url("footer.css");
+@import url("copyright.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
