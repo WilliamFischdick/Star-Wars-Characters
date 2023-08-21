@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("header.css");
+@import url("section-main.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
@@ -18,7 +19,7 @@ body {
 
     --white: #ffffff;
     --gold: #ffd700;
-
+    --shadow: #00000080;
 
 
 
