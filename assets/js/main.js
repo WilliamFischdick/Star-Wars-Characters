@@ -12,7 +12,7 @@ async function loadCharacters (url) {
 
     try {
         const response = await fetch(url);
-        const responseJson =  await response.jason();
+        const responseJson =  await response.json();
 
         responseJson.results.forEach((character) => {
             const card = document.createElement("div");
