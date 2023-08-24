@@ -1,5 +1,7 @@
 /*Variáveis*/
 let currentPageUrl = 'https://swapi.dev/api/people/'
+const nextButton = document.getElementById('next-btn');
+const backButton = document.getElementById('back-btn');
 
 
 
@@ -32,6 +34,10 @@ async function loadCharacters (url) {
             mainContent.appendChild(card);
         })
 
+        nextButton.disabled = !responseJson.next;
+        backButton.disabled = !responseJson.previous;
+
+        backButton.style.visibility = responseJson.previous? "visible" : "hidden";
         currentPageUrl = url;
 
     } catch (error) {
@@ -39,7 +45,6 @@ async function loadCharacters (url) {
         alert('Erro ao carregar os cards');
     }
 }
-
 
 
 
@@ -51,4 +56,9 @@ window.onload = async () => {
         console.log(error);
         alert('Erro ao carregar os personagens');
     }
+
+    nextButton.addEventListener('click', loadNextPage);
+    backButton.addEventListener('click', loadPreviousPage);
 };
+
+
