@@ -4,6 +4,7 @@
 @import url("buttons.css");
 @import url("footer.css");
 @import url("copyright.css");
+@import url("modal.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
@@ -23,5 +24,6 @@ body {
     --gold: #ffd700;
     --shadow: #00000080;
     --dark: #000000;
+    --shade: #0d0d0d;
 
 }
