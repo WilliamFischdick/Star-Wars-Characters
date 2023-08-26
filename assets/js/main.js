@@ -7,6 +7,20 @@ const backButton = document.getElementById('back-btn');
 
 /* Functions*/
 
+
+window.onload = async () => {
+
+    try {
+        await loadCharacters(currentPageUrl);
+    } catch (error) {
+        console.log(error);
+        alert('Erro ao carregar os personagens');
+    }
+
+    nextButton.addEventListener('click', loadNextPage);
+    backButton.addEventListener('click', loadPreviousPage);
+};
+
 async function loadCharacters (url) {
     
     const mainContent = document.getElementById('main-content');
@@ -46,19 +60,36 @@ async function loadCharacters (url) {
     }
 }
 
+/* Buttons */
 
+async function loadNextPage() {
 
-window.onload = async () => {
+    if (!currentPageUrl) return;
 
     try {
-        await loadCharacters(currentPageUrl);
+      const response = await fetch(currentPageUrl);
+      const responseJson = await response.json();
+
+      await loadCharacters(responseJson.next);
+
     } catch (error) {
         console.log(error);
-        alert('Erro ao carregar os personagens');
+        alert('Erro ao carregar a próxima página');
     }
+}
 
-    nextButton.addEventListener('click', loadNextPage);
-    backButton.addEventListener('click', loadPreviousPage);
-};
+async function loadPreviousPage() {
 
+    if (!currentPageUrl) return;
 
+    try {
+      const response = await fetch(currentPageUrl);
+      const responseJson = await response.json();
+      
+      await loadCharacters(responseJson.previous);
+      
+    } catch (error) {
+        console.log(error);
+        alert('Erro ao carregar a página anterior');
+    }
+}
