@@ -2,6 +2,7 @@
 let currentPageUrl = 'https://swapi.dev/api/people/'
 const nextButton = document.getElementById('next-btn');
 const backButton = document.getElementById('back-btn');
+const modal = document.getElementById('modal');
 
 
 
@@ -45,6 +46,10 @@ async function loadCharacters (url) {
             characterNameBg.appendChild(characterName);
             card.appendChild(characterNameBg);
 
+            card.onclick = () => {
+                modal.style.visibility = "visible";
+            }
+
             mainContent.appendChild(card);
         })
 
@@ -58,6 +63,10 @@ async function loadCharacters (url) {
         console.log(error);
         alert('Erro ao carregar os cards');
     }
+}
+
+function hideModal() {
+    modal.style.visibility = "hidden";
 }
 
 /* Buttons */
