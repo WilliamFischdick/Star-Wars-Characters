@@ -5,12 +5,15 @@
 @import url("footer.css");
 @import url("copyright.css");
 @import url("modal.css");
+@import url("media_query/header-mobile.css");
+@import url("media_query/footer-mobile.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
     background-size: cover;
     font-family: var(--font-text);
     color:var(--white);
+    padding: 0 2em;
 }
 
 :root {

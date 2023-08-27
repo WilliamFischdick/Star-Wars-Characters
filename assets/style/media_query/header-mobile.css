@@ -1,0 +1,19 @@
+@media screen and (max-width: 415px) {
+    h2 {
+        text-align: center;
+    }
+
+    .logo-text {
+        padding-left: 5px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+    }
+
+    .social-media {
+        padding: 1em 0;
+    }
+}

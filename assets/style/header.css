@@ -30,6 +30,7 @@ i {
 .logo-text {
     font-size: 1rem;
     color: var(--white);
+    padding-left: 20px;
 }
 
 .social-media {
