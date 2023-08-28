@@ -1,0 +1,14 @@
+@media screen and (max-width: 415px) {
+    .modal-content {
+        width: 65vw;
+        height: 65vh;
+    }
+
+    .character-image{
+        margin-bottom: 3em;
+    }
+
+    .character-details {
+        text-align: center;
+    }
+}

@@ -7,6 +7,7 @@
 @import url("modal.css");
 @import url("media_query/header-mobile.css");
 @import url("media_query/footer-mobile.css");
+@import url("media_query/modal-mobile.css");
 
 body {
     background-image: url("../img/universo-bg.jpg");
